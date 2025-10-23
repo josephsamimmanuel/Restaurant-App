@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoAuthSearch from './LogoAuthSearch'
-import FilterCusines from './filterCusines'
+import FilterCusines from './FilterCusines'
 function Header() {
     return (
         <div className='bg-white shadow-md'>
