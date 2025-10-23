@@ -1,4 +1,7 @@
 import React from 'react'
+import Categories from './Categories'
+import Brands from './Brands'
+import Cards from './Cards'
 
 const categories = [
   {
@@ -72,7 +75,7 @@ const brands = [
   },
   {
     id: 2,
-    name: 'Muchin Crwe',
+    name: 'Muchin Crew',
     duration: '20-30 min',
     image: 'https://b.zmtcdn.com/data/brand_creatives/logos/dab5bcd566375920b3b01ff9424c46221750566379.png?output-format=webp'
   },
@@ -96,30 +99,67 @@ const brands = [
   },
 ]
 
+const cardDetails = [{
+  id: 1,
+  restaurantName: 'Pizza Hut',
+  rating: 4.8,
+  category: 'Pizza, Fast Food',
+  costForTwo: '₹ 100 for two',
+  isOffers: true,
+  offersText: '50% OFF',
+  duration: '24 min',
+  promoted: true,
+  image: 'https://b.zmtcdn.com/data/pictures/8/20854718/12bf01ba16e38e0e17a1b696fccc443b_o2_featured_v2.jpg?output-format=webp'
+},
+{
+  id: 2,
+  restaurantName: 'Burger King',
+  rating: 4.5,
+  category: 'Fast Food',
+  costForTwo: '₹ 500 for two',
+  isOffers: false,
+  offersText: '',
+  duration: '28 min',
+  promoted: false,
+  image: 'https://b.zmtcdn.com/data/pictures/3/19057193/f7f95ea4eb814a808b304dce5303d0a5_o2_featured_v2.jpg?output-format=webp'
+},
+{
+  id: 3,
+  restaurantName: 'Pizza Hut',
+  rating: 4.8,
+  category: 'Pizza, Fast Food',
+  costForTwo: '₹ 100 for two',
+  isOffers: true,
+  offersText: '50% OFF',
+  duration: '28 min',
+  promoted: false,
+  image: 'https://b.zmtcdn.com/data/pictures/9/19064389/c15d6674c51833cd7da456a6f91eaf74_o2_featured_v2.jpg?output-format=webp'
+},
+{
+  id: 4,
+  restaurantName: 'Pizza Hut',
+  rating: 4.8,
+  category: 'Pizza, Fast Food',
+  costForTwo: '₹ 100 for two',
+  isOffers: true,
+  offersText: '50% OFF',
+  duration: '24 min',
+  promoted: false,
+  image: 'https://b.zmtcdn.com/data/pictures/6/19416856/5ed6b1bbb8f5992238bf8a80b2832e3e_o2_featured_v2.jpg?output-format=webp'
+},
+]
+
 function Home() {
   return (
-    <div className='container mx-auto px-2 sm:px-4 py-3 sm:py-4 flex flex-col gap-3 sm:gap-4 lg:gap-6'>
-      <h1 className='text-3xl font-bold border-b border-gray-300 pb-4'>Inspiration for your first order</h1>
-      <div className='flex flex-wrap gap-4 '>
-        {categories.map((category) => (
-          <div key={category.id} className='flex flex-col items-center gap-2'>
-            <img src={category.image} alt={category.name} className='w-40 h-40 object-cover rounded-full' />
-            <p>{category.name}</p>
-          </div>
-        ))}
-      </div>
-      <h1 className='text-3xl font-bold border-b border-gray-300 pb-4'>Top brands for you</h1>
-      <div className='flex flex-wrap gap-4 '>
-        {brands.map((brand) => (
-          <div key={brand.id} className='flex flex-col items-center gap-2 '>
-            <img src={brand.image} alt={brand.name} className='w-40 h-40 object-cover rounded-full' />
-            <p>{brand.name}</p>
-            <p>{brand.duration}</p>
-          </div>
-        ))}
-      </div>
+    <div className='container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8 flex flex-col gap-6 sm:gap-8 lg:gap-10'>
+      {/* Categories Section */}
+      <Categories categories={categories} />
+      {/* Brands Section */}
+      <Brands brands={brands} />
+      {/* Restaurant Cards Section */}
+      <Cards cardDetails={cardDetails} />
     </div>
-  )
+  );
 }
 
 export default Home
