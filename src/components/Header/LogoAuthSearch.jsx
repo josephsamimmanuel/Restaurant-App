@@ -1,6 +1,8 @@
 import React from 'react'
 import { SearchOutlined, EnvironmentOutlined } from '@ant-design/icons'
+import { useNavigate } from 'react-router-dom'
 function LogoAuthSearch() {
+    const navigate = useNavigate()
     return (
         <div className='flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-4'>
             {/* Logo - Hidden on mobile, visible on tablet and up */}
@@ -34,10 +36,10 @@ function LogoAuthSearch() {
 
             {/* Login/Signup Buttons */}
             <div className='flex items-center gap-2 shrink-0'>
-                <button className='text-black px-3 sm:px-4 py-2 rounded-md border border-gray-300 text-sm hover:bg-gray-50 transition'>
+                <button className='text-black px-3 sm:px-4 py-2 rounded-md border border-gray-300 text-sm hover:bg-gray-50 transition' onClick={() => navigate('/login')}>
                     Login
                 </button>
-                <button className='text-black px-3 sm:px-4 py-2 rounded-md border border-gray-300 text-sm hover:bg-gray-50 transition'>
+                <button className='text-black px-3 sm:px-4 py-2 rounded-md border border-gray-300 text-sm hover:bg-gray-50 transition' onClick={() => navigate('/register')}>
                     Signup
                 </button>
                 {/* <div className='flex items-center'>
