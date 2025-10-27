@@ -7,6 +7,7 @@ import SignIn from './SignIn'
 import { Link } from 'react-router-dom'
 
 function Register() {
+  
   const onFinish = (values) => {
     console.log('Success:', values)
   }
