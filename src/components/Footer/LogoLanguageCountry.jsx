@@ -1,14 +1,14 @@
 import React from 'react'
-
+import logo from '../../../public/logo.png'
 function LogoLanguageCountry() {
   return (
     <div className='flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-2 pb-4 border-b border-gray-300'>
     {/* Logo */}
     <div className='flex items-center shrink-0'>
         <img 
-            src={'https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png'} 
+            src={logo} 
             alt='logo' 
-            className='w-20 h-8 sm:w-24 sm:h-10' 
+            className='w-72 h-20 sm:w-72 sm:h-20' 
         />
     </div>
 

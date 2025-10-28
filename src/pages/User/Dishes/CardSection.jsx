@@ -25,7 +25,7 @@ function CardSection({ images, profileImage }) {
 
             {/* Restaurant Info */}
             <div className='flex flex-col gap-2 sm:gap-3'>
-                <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold'>Zomato</h1>
+                <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold'>JMSV Home Made Food</h1>
                 <p className='text-gray-500 text-xs sm:text-sm leading-relaxed'>Comfort Food | Bakery Items | Non-Veg Tiffin Items | Pregnancy Friendly | kids friendly | South Indian | Halal</p>
                 
                 {/* Food Type Badges */}
@@ -66,7 +66,7 @@ function CardSection({ images, profileImage }) {
                         />
                         <div className='flex flex-col gap-1 sm:gap-2 min-w-0 flex-1'>
                             <span className='text-xs sm:text-sm inline-flex items-center gap-1 '>
-                              <ProfileOutlined />kamali
+                              <ProfileOutlined />JMSV
                             </span>
                             <span className='text-xs sm:text-sm text-gray-600 inline-flex items-start gap-1 leading-relaxed'>
                               <SmileOutlined className='shrink-0 mt-0.5' />
