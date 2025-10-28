@@ -189,15 +189,17 @@ function Dishes() {
   const filteredItems = foodItems.filter(item => item.foodTime === activeTab)
 
   return (
-    <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 flex flex-col gap-8">
-      {/* Top Carousel Section */}
-      <CardSection images={images} profileImage={profileImage} />
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-4 sm:py-6 lg:py-8 flex flex-col gap-6 sm:gap-8">
+        {/* Top Carousel Section */}
+        <CardSection images={images} profileImage={profileImage} />
 
-      {/* Tabs */}
-      <TabbedSection activeTab={activeTab} setActiveTab={setActiveTab} />
+        {/* Tabs */}
+        <TabbedSection activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* Food Items Section */}
-      <FoodItems filteredItems={filteredItems} activeTab={activeTab} />
+        {/* Food Items Section */}
+        <FoodItems filteredItems={filteredItems} activeTab={activeTab} />
+      </div>
     </div>
   )
 }

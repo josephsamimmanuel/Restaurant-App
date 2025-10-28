@@ -42,7 +42,7 @@ function CardSection({ images, profileImage }) {
                 </div>
 
                 {/* Location, Price & License */}
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-4'>
                     <div className='flex flex-wrap gap-2'>
                         <span className='text-green-600 inline-flex items-center gap-1 sm:gap-2 bg-green-100 px-2 py-1 rounded-md text-xs sm:text-sm'>
                           <EnvironmentOutlined />3.7 kms
@@ -58,14 +58,14 @@ function CardSection({ images, profileImage }) {
                     </div>
 
                     {/* Profile Section */}
-                    <div className='flex gap-2 sm:gap-3'>
+                    <div className='flex justify-start items-center gap-2 sm:gap-3'>
                         <img 
                           src={profileImage} 
                           alt="profile" 
-                          className='w-8 h-8 sm:w-10 sm:h-10 object-cover border border-gray-300 rounded-md shrink-0' 
+                          className='w-8 h-8 sm:w-10 sm:h-12 object-cover border border-gray-300 rounded-md shrink-0' 
                         />
                         <div className='flex flex-col gap-1 sm:gap-2 min-w-0 flex-1'>
-                            <span className='text-xs sm:text-sm inline-flex items-center gap-1'>
+                            <span className='text-xs sm:text-sm inline-flex items-center gap-1 '>
                               <ProfileOutlined />kamali
                             </span>
                             <span className='text-xs sm:text-sm text-gray-600 inline-flex items-start gap-1 leading-relaxed'>
