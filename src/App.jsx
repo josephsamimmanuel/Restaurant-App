@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* User Routes */}
-          <Route path='/' element={<ProtectedRoutes><Home /></ProtectedRoutes>} />
-          <Route path='/dishes' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} />
+          <Route path='/' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} />
+          {/* <Route path='/dishes' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} /> */}
           {/* Admin Routes */}
 
           {/* Common Routes */}
