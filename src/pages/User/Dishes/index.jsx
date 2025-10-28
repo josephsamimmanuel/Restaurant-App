@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CardSection from './CardSection'
 import TabbedSection from './TabbedSection'
+import ToggleButton from './ToggleButton'
 import FoodItems from './FoodItems'
 
 const images = [
@@ -179,11 +180,69 @@ const foodItems = [
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHn5ScuKRgBoicSHlOuQbZj64SY4LhtGiooA&s'
     }
   ];
-  
-  
+
+  const masalaItems= [
+    {
+      id: 1,
+      name: 'Andhra Paruppu Podi',
+      price: 120,
+      foodTime: 'anytime',
+      foodType: 'Veg',
+      foodDescription:
+        'A traditional Andhra-style spicy lentil powder made with roasted dal, red chilies, and garlic — perfect with hot rice and ghee.',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWu0vBXLaYJT6chQFZ1Do4vHal3P-9K4sUw&s'
+    },
+    {
+      id: 2,
+      name: 'Sambar Powder',
+      price: 90,
+      foodTime: 'lunch',
+      foodType: 'Veg',
+      foodDescription:
+        'A flavorful South Indian spice mix of coriander, cumin, and red chilies used to prepare authentic sambar.',
+      image:
+        'https://dakshindelight.com/cdn/shop/files/sambar-dd.jpg?v=1726769297'
+    },
+    {
+      id: 3,
+      name: 'Rasam Powder',
+      price: 80,
+      foodTime: 'lunch',
+      foodType: 'Veg',
+      foodDescription:
+        'A tangy and aromatic spice blend with pepper, cumin, and garlic, used to make traditional South Indian rasam.',
+      image:
+        'https://i.ytimg.com/vi/FYKaWvt4hP4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAPuF2lbTcRKB4SD_aKMqSieP4yIw'
+    },
+    {
+      id: 4,
+      name: 'Kuzhambu Milagai Podi',
+      price: 100,
+      foodTime: 'lunch',
+      foodType: 'Veg',
+      foodDescription:
+        'A rich, spicy South Indian curry powder made with red chilies, coriander seeds, and aromatic spices for kuzhambu dishes.',
+      image:
+        'https://paattiskitchen.com/wp-content/uploads/2022/12/kmc_20221129_211625.jpg'
+    },
+    {
+      id: 5,
+      name: 'Idli Podi',
+      price: 85,
+      foodTime: 'breakfast',
+      foodType: 'Veg',
+      foodDescription:
+        'A coarse, spicy powder made with roasted lentils and red chilies — enjoyed best with idli or dosa and sesame oil.',
+      image:
+        'https://www.thendralnaturals.com/wp-content/uploads/2023/08/idli-podi.jpg'
+    }
+  ]  
 
 function Dishes() {
   const [activeTab, setActiveTab] = useState('breakfast')
+  const [toggleButton, setToggleButton] = useState("Home Food");
+
 
   // Filter items by selected foodTime
   const filteredItems = foodItems.filter(item => item.foodTime === activeTab)
@@ -194,11 +253,21 @@ function Dishes() {
         {/* Top Carousel Section */}
         <CardSection images={images} profileImage={profileImage} />
 
-        {/* Tabs */}
-        <TabbedSection activeTab={activeTab} setActiveTab={setActiveTab} />
+        {/* Toggle Button Section- Home Food, Home Masalas */}
+        <ToggleButton toggleButton={toggleButton} setToggleButton={setToggleButton} />
 
-        {/* Food Items Section */}
-        <FoodItems filteredItems={filteredItems} activeTab={activeTab} />
+        {toggleButton === "Home Food" && (
+          <>
+            <TabbedSection activeTab={activeTab} setActiveTab={setActiveTab} />
+            <FoodItems filteredItems={filteredItems} activeTab={activeTab} />
+          </>
+        )}
+        {toggleButton === "Home Masalas" && (
+          <>
+            <FoodItems filteredItems={masalaItems} activeTab={activeTab} />
+          </>
+        )}
+
       </div>
     </div>
   )
