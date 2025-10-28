@@ -109,6 +109,7 @@ const cardDetails = [{
   offersText: '50% OFF',
   duration: '24 min',
   promoted: true,
+  pureVeg: true,
   image: 'https://b.zmtcdn.com/data/pictures/8/20854718/12bf01ba16e38e0e17a1b696fccc443b_o2_featured_v2.jpg?output-format=webp'
 },
 {
@@ -121,6 +122,7 @@ const cardDetails = [{
   offersText: '',
   duration: '28 min',
   promoted: false,
+  pureVeg: false,
   image: 'https://b.zmtcdn.com/data/pictures/3/19057193/f7f95ea4eb814a808b304dce5303d0a5_o2_featured_v2.jpg?output-format=webp'
 },
 {
@@ -133,6 +135,7 @@ const cardDetails = [{
   offersText: '50% OFF',
   duration: '28 min',
   promoted: false,
+  pureVeg: false,
   image: 'https://b.zmtcdn.com/data/pictures/9/19064389/c15d6674c51833cd7da456a6f91eaf74_o2_featured_v2.jpg?output-format=webp'
 },
 {
@@ -145,6 +148,7 @@ const cardDetails = [{
   offersText: '50% OFF',
   duration: '24 min',
   promoted: false,
+  pureVeg: false,
   image: 'https://b.zmtcdn.com/data/pictures/6/19416856/5ed6b1bbb8f5992238bf8a80b2832e3e_o2_featured_v2.jpg?output-format=webp'
 },
 ]
