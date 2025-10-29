@@ -18,7 +18,7 @@ function LogoAuthSearch() {
                 dispatch(setUser(null))
                 sessionStorage.removeItem('token')
                 toast.success(response.message)
-                navigate('/login')
+                navigate('/')
             } else {
                 toast.error(response.message)
             }

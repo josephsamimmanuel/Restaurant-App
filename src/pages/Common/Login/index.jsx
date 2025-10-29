@@ -18,7 +18,7 @@ function Login() {
         console.log('Success:', response)
         toast.success(response.message)
         sessionStorage.setItem('token', response.token)
-        navigate('/')
+        navigate('/dishes')
       } else {
         console.log('Error:', response.message)
         toast.error(response.message)

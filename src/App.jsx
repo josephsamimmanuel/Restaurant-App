@@ -16,12 +16,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* User Routes */}
-          <Route path='/' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} />
+          <Route path='/dishes' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} />
           {/* <Route path='/dishes' element={<ProtectedRoutes><Dishes /></ProtectedRoutes>} /> */}
           {/* Admin Routes */}
 
           {/* Common Routes */}
-          <Route path='/login' element={<CommonRoutes><Login /></CommonRoutes>} />
+          <Route path='/' element={<CommonRoutes><Login /></CommonRoutes>} />
           <Route path='/register' element={<CommonRoutes><Register /></CommonRoutes>} /> 
         </Routes>
       </BrowserRouter>

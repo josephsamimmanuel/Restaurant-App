@@ -17,7 +17,7 @@ function Register() {
       if (response) {
         console.log('Success:', response)
         toast.success(response.message)
-        navigate('/login')
+        navigate('/')
       } else {
         console.log('Error:', response.message)
         toast.error(response.message)
