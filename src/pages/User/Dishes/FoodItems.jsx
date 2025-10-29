@@ -12,7 +12,7 @@ function FoodItems({ filteredItems, activeTab }) {
           {/* Text Content */}
           <div className="p-3 sm:p-4 flex flex-col justify-between gap-2 flex-1 min-w-0">
             <div className="flex flex-col gap-1.5 sm:gap-2">
-              <h3 className="text-base sm:text-lg font-semibold line-clamp-2 text-gray-800">
+              <h3 className="text-base sm:text-md font-semibold line-clamp-2 text-gray-800">
                 {food.name}
               </h3>
               
