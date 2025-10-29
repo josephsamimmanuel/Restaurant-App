@@ -29,3 +29,13 @@ export const getUserDetails = async () => {
         return error.response.data
     }
 }
+
+// Logout User
+export const logoutUser = async () => {
+    try {
+        const response = await axiosInstance.post('/users/logout')
+        return response.data
+    } catch (error) {
+        return error.response.data
+    }
+}

@@ -6,11 +6,12 @@ import Register from './pages/Common/Register'
 import Dishes from './pages/User/Dishes'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
-
+import { Provider } from 'react-redux'
+import { store } from './redux/reducer'
 function App() {
 
   return (
-    <>
+    <Provider store={store}>
       <Toaster position='top-center' />
       <BrowserRouter>
         <Routes>
@@ -24,7 +25,7 @@ function App() {
           <Route path='/register' element={<CommonRoutes><Register /></CommonRoutes>} /> 
         </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   )
 }
 
