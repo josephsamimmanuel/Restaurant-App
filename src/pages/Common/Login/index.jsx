@@ -5,10 +5,27 @@ import Divider from './Divider'
 import SocialloginButton from './SocialloginButton'
 import SignUpLink from './SignUpLink'
 import { Link } from 'react-router-dom'
+import { loginUser } from '../../../apiCalls/users'
+import toast from "react-hot-toast";
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
-  const onFinish = (values) => {
-    console.log('Success:', values)
+  const navigate = useNavigate()
+  const onFinish = async (values) => {
+    try {
+      const response = await loginUser(values)
+      if (response) {
+        console.log('Success:', response)
+        toast.success(response.message)
+        sessionStorage.setItem('token', response.token)
+        navigate('/')
+      } else {
+        console.log('Error:', response.message)
+        toast.error(response.message)
+      }
+    } catch (error) {
+      console.log('Error:', error)
+    }
   }
 
   return (

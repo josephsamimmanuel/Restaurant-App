@@ -39,7 +39,7 @@ function FoodItems({ filteredItems, activeTab }) {
           {/* Image and Button */}
           <div className="relative w-full h-40 sm:h-full sm:w-36 md:w-40 lg:w-44 shrink-0 group py-6 px-2">
             {food.isOffer && (
-              <p className="absolute top-2 right-2 text-xs sm:text-sm text-white bg-green-600 rounded-md px-2 py-1 font-semibold shadow-md z-20">
+              <p className="absolute top-2 right-2 text-xs sm:text-sm text-white bg-gray-700 rounded-md px-2 py-1 font-semibold shadow-md z-20">
                 {food.offePercentage}
               </p>
             )}

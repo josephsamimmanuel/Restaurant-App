@@ -5,11 +5,13 @@ import Login from './pages/Common/Login'
 import Register from './pages/Common/Register'
 import Dishes from './pages/User/Dishes'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
 
   return (
     <>
+      <Toaster position='top-center' />
       <BrowserRouter>
         <Routes>
           {/* User Routes */}

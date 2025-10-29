@@ -13,7 +13,7 @@ function RegisterForm({ onFinish }) {
           >
             {/* Full Name Field */}
             <Form.Item 
-              name='name' 
+              name='fullName' 
               label={<span className='text-sm sm:text-base font-semibold text-gray-700'>Full Name</span>}
               rules={[
                 { required: true, message: 'Please enter your full name!' }
@@ -54,7 +54,7 @@ function RegisterForm({ onFinish }) {
 
             {/* Phone Field */}
             <Form.Item 
-              name='phone' 
+              name='phoneNumber' 
               label={<span className='text-sm sm:text-base font-semibold text-gray-700'>Phone Number</span>}
               rules={[
                 { required: true, message: 'Please enter your phone number!' }

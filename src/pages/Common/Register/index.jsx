@@ -5,11 +5,26 @@ import Divider from './Divider'
 import SocialLoginButtons from './SocialLoginButtons'
 import SignIn from './SignIn'
 import { Link } from 'react-router-dom'
+import { registerUser } from '../../../apiCalls/users'
+import toast from "react-hot-toast";
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
-  
-  const onFinish = (values) => {
-    console.log('Success:', values)
+  const navigate = useNavigate()
+  const onFinish = async (values) => {
+    try {
+      const response = await registerUser(values)
+      if (response) {
+        console.log('Success:', response)
+        toast.success(response.message)
+        navigate('/login')
+      } else {
+        console.log('Error:', response.message)
+        toast.error(response.message)
+      }
+    } catch (error) {
+      console.log('Error:', error)
+    }
   }
 
   return (
