@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:7777/api'
+export const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:7777/api' : 'https://restaurant-app-server-z9vl.onrender.com/api'
