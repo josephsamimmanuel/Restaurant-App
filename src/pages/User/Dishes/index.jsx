@@ -9,6 +9,7 @@ import { setMasalaItems } from '../../../redux/masalaItemsSlice'
 import { getAllFoodItems } from '../../../apiCalls/foodItems'
 import { getAllMasalaItems } from '../../../apiCalls/masalaItems'
 import toast from 'react-hot-toast'
+import { setLoading } from '../../../redux/loaderSlice'
 
 const images = [
   { id: 1, image: 'https://madhurasrecipe.com/wp-content/uploads/2022/12/Chicken-Biryani-Featured.jpg' },
@@ -36,27 +37,35 @@ function Dishes() {
 
   const fetchFoodItems = async () => {
     try {
+      dispatch(setLoading(true))
     const response = await getAllFoodItems()
     if (response) {
       dispatch(setFoodItems(response.foodItems))
+      dispatch(setLoading(false))
     } else {
       toast.error(response.message)
+      dispatch(setLoading(false))
     }
     } catch (error) {
       console.log(error)
+      dispatch(setLoading(false))
     }
   }
 
   const fetchMasalaItems = async () => {
     try {
+      dispatch(setLoading(true))
     const response = await getAllMasalaItems()
     if (response) {
       dispatch(setMasalaItems(response.masalaItems))
+      dispatch(setLoading(false))
     } else {
       toast.error(response.message)
+      dispatch(setLoading(false))
     }
     } catch (error) {
       console.log(error)
+      dispatch(setLoading(false))
     }
   }
 

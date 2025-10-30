@@ -49,3 +49,23 @@ export const deleteFoodItem = async (id) => {
         return error.response.data
     }
 }
+
+// Auto Complete Food Items
+export const autoCompleteFoodItems = async (query) => {
+    try {
+        const response = await axiosInstance.get(`/foodItems/auto-complete?query=${query}`)
+        return response.data
+    } catch (error) {
+        return error.response.data
+    }
+}
+
+// Search Food Items
+export const searchFoodItems = async (query) => {
+    try {
+        const response = await axiosInstance.get(`/foodItems/search?query=${query}`)
+        return response.data
+    } catch (error) {
+        return error.response.data
+    }
+}

@@ -8,11 +8,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { Provider } from 'react-redux'
 import { store } from './redux/reducer'
+import Spinner from './components/Spinner'
 function App() {
 
   return (
     <Provider store={store}>
       <Toaster position='top-center' />
+      <Spinner />
       <BrowserRouter>
         <Routes>
           {/* User Routes */}
